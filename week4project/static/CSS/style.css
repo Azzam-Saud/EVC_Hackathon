@@ -1,0 +1,187 @@
+body {
+  font-family: 'Metropolis', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.navbar {
+  background-color:#88aed7;
+  padding: 1rem 2rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-nav .nav-item {
+  display: inline;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color:#88aed7;
+  border-radius: 5px;
+}
+
+.jumbotron {
+  background-color:#88aed7;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  margin: 2rem 0;
+}
+
+.jumbotron h1 {
+  font-size: 3rem;
+}
+
+.jumbotron p {
+  font-size: 1.2rem;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.main {
+  padding: 2rem 0;
+}
+
+.main h1 span {
+  color:#88aed7;
+}
+
+.main_image img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.main_btn {
+  margin-top: 1rem;
+}
+
+.main_btn .btn {
+  background-color: #88aed7;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.main_btn .btn:hover {
+  background-color: #88aed7;
+}
+
+.gallary, .recommended1, .services, .branches, .team {
+  margin: 2rem 0;
+}
+
+.gallary h1, .recommended1 h1, .services h1, .branches h1, .team h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.gallary_image_box, .recommended_box, .team_box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.gallary_image, .recommended_card, .profile {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.gallary_image img, .recommended_image img, .profile img {
+  width: 100%;
+  height: auto;
+}
+
+.gallary_image:hover, .recommended_card:hover, .profile:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  margin-bottom: 10px;
+  color: #88aed7;
+}
+
+.gallary_image h3, .recommended_info h3, .info h2 {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.gallary_btn, .recommended_btn {
+  display: block;
+  background-color: #88aed7;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.gallary_btn:hover, .recommended_btn:hover {
+  background-color:#88aed7;
+}
+
+footer {
+  background-color: #88aed7;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer_main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer_tag h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer_tag p, .footer_tag a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer_tag a:hover {
+  text-decoration: underline;
+}
+
+.footer_main p {
+  margin: 0;
+  font-size: 1rem;
+}

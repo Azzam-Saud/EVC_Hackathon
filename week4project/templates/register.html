@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب جديد</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .register-container {
+            margin-top: 50px;
+            max-width: 600px;
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 15px;
+        }
+        .register-container h1 {
+            color: #88aed7;
+            margin-bottom: 1.5rem;
+        }
+        .form-control {
+            border-radius: 10px;
+        }
+        .btn-primary {
+            background-color: #88aed7;
+            border: none;
+            border-radius: 10px;
+            padding: 0.5rem;
+            width: 100%;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #76a0c4;
+        }
+    </style>
+    <script>
+        function showPopup(message) {
+            alert(message);
+            window.location.href = "/";
+        }
+    </script>
+</head>
+<body onload="if('{{ message }}') { showPopup('{{ message }}'); }">
+    <div class="container d-flex justify-content-center">
+        <div class="register-container">
+            <h1 class="text-center">إنشاء حساب جديد</h1>
+            <form action="/register" method="POST">
+                <div class="form-group">
+                    <label for="username">رقم الهوية</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">الجنس</label>
+                    <input type="text" class="form-control" id="gender" name="gender" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">العمر</label>
+                    <input type="number" class="form-control" id="age" name="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="region">المنطقة الإدارية</label>
+                    <input type="text" class="form-control" id="region" name="region" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">تأكيد كلمة المرور</label>
+                    <input type="password" class="form-control" id="confirm-password" name="confirm_password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">إنشاء حساب</button>
+                <p class="text-center mt-3">تملك حساب؟ <a href="/login">تسجيل الدخول</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+

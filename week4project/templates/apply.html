@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقديم طلب</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .apply-container {
+            margin-top: 50px;
+            max-width: 600px;
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 15px;
+        }
+        .apply-container h1 {
+            color: #88aed7;
+            margin-bottom: 1.5rem;
+        }
+        .form-control {
+            border-radius: 10px;
+        }
+        .btn-primary {
+            background-color: #88aed7;
+            border: none;
+            border-radius: 10px;
+            padding: 0.5rem;
+            width: 100%;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #76a0c4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container d-flex justify-content-center">
+        <div class="apply-container">
+            <h1 class="text-center">تقديم طلب</h1>
+            <form action="/apply" method="POST">
+                <div class="form-group">
+                    <label for="رقم_الهوية">رقم الهوية</label>
+                    <input type="text" class="form-control" id="رقم_الهوية" name="رقم_الهوية" required>
+                </div>
+                <div class="form-group">
+                    <label for="المؤهل">المؤهل</label>
+                    <input type="text" class="form-control" id="المؤهل" name="المؤهل" required>
+                </div>
+                <div class="form-group">
+                    <label for="التخصص">التخصص</label>
+                    <input type="text" class="form-control" id="التخصص" name="التخصص" required>
+                </div>
+                <div class="form-group">
+                    <label for="المؤسسة_التعليمية">المؤسسة التعليمية</label>
+                    <input type="text" class="form-control" id="المؤسسة_التعليمية" name="المؤسسة_التعليمية" required>
+                </div>
+                <div class="form-group">
+                    <label for="سنة_التخرج">سنة التخرج</label>
+                    <input type="text" class="form-control" id="سنة_التخرج" name="سنة_التخرج" required>
+                </div>
+                <div class="form-group">
+                    <label for="المعدل">المعدل</label>
+                    <input type="text" class="form-control" id="المعدل" name="المعدل" required>
+                </div>
+                <button type="submit" class="btn btn-primary">تقديم</button>
+            </form>
+        </div>
+    </div>
+
+    {% if success %}
+        <script>
+            alert('تم التقديم بنجاح');
+            window.location.href = "/";
+        </script>
+    {% endif %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
